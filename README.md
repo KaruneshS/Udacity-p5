@@ -1,10 +1,9 @@
-<b>IP Address: 107.21.35.134
-SSH port: 2200
+<b>IP Address: 107.21.35.134<br>
+SSH port: 2200<br>
 Application URL: http://107.21.35.134/login
 </b>
 
 Steps followed for Udacity Linux server configuration project:<br/>
-<br/>
 * Creating user grader & generating ssh key for login<br/>
 	- Create user grader using "sudo adduser grader"<br/>
 	- Add SSH key in authorized keys for grader<br/>
@@ -33,16 +32,7 @@ Steps followed for Udacity Linux server configuration project:<br/>
 	- Modify the file /etc/apache2/sites-enabled/000-default.conf to configure Apache to handle requests using the WSGI module
 	- Modify & add line in Virtual host configuration "WSGIScriptAlias / /var/www/html/myapp.wsgi"
 	- Restart apache using "sudo apache2ctl restart"
-	- Create & modify myapp.wsgi file using "sudo nano /var/www/html/myapp.wsgi" & add some sample program to test as shown below:
-	
-	<b>def application(environ, start_response):
-		status = '200 OK'
-		output = 'Hello World!'
-
-		response_headers = [('Content-type', 'text/plain'), ('Content-Length', str(len(output)))]
-		start_response(status, response_headers)
-
-		return [output]</b>
+	- Create & modify myapp.wsgi file using "sudo nano /var/www/html/myapp.wsgi" & add some sample program to test.
 
 * Install Postgresql: (Refer: https://www.digitalocean.com/community/tutorials/how-to-install-and-use-postgresql-on-ubuntu-16-04)
 * Deploy Catalog app on the server: (Refer: https://www.digitalocean.com/community/tutorials/how-to-deploy-a-flask-application-on-an-ubuntu-vps)
